@@ -1,0 +1,92 @@
+/* ---------- PAGE ---------- */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #0f1114;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+/* ---------- PLAYER ---------- */
+.player {
+  width: 330px;
+  background: #2e2f33;
+  border-radius: 25px;
+  padding: 18px;
+  color: #fff;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+/* ---------- TITLE ---------- */
+.player h2 {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+/* ---------- NOW PLAYING ---------- */
+.song:first-of-type {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.song:first-of-type img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border: 4px solid #444;
+}
+
+.song:first-of-type p {
+  font-weight: bold;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.song:first-of-type audio {
+  width: 100%;
+  filter: invert(1);
+}
+
+/* ---------- PLAYLIST ---------- */
+.song:not(:first-of-type) {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #444;
+  padding: 10px 12px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  transition: 0.3s;
+  inspect: pointer;
+}
+
+.song:not(:first-of-type):hover {
+  background: #555;
+  transform: scale(1.02);
+}
+
+/* playlist image */
+.song:not(:first-of-type) img {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* playlist text */
+.song:not(:first-of-type) p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* hide audio bar in playlist */
+.song:not(:first-of-type) audio {
+  display: none;
+}
